@@ -53,8 +53,8 @@ class Owner
   end
 
   def sell_pets
-    pets.each do |species, pet|
-      pets[species].delete_if {|pet| pet.mood = "nervous"}  # can also use shift or set pets[:species] = []
+    pets.each do |species, pets|
+      pets.delete_if {|pet| pet.mood = "nervous"}  # can also use shift or set pets[:species] = []
     end
   end
 
